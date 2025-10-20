@@ -83,7 +83,10 @@ Le pipeline de données **Forecast 2.0** se compose de plusieurs étapes :
 ##  Auteur
 
 👤 **Khalid OURO-ADOYI**  
-📧 khalidouroadoyi@gmail.com  
+
+Data Analyst & Engineer | Développeur Power BI ,Qlik sense 
+📧 Email : khalidouroadoyi@gmail.com
+🔗 [LinkedIn](https://www.linkedin.com/in/khalid-ouro-adoyi/) | [GitHub](https://github.com/LIDONI)
 
 ---
 
