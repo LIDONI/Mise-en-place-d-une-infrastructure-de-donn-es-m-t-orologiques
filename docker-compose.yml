@@ -1,0 +1,33 @@
+version: '3.9'
+
+services:
+  mongodb:
+    image: mongo:7
+    container_name: mongodb_server
+    restart: always
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: forecast_writer
+      MONGO_INITDB_ROOT_PASSWORD: MotDePasseSécurisé123
+      MONGO_INITDB_DATABASE: weather_data_db
+    ports:
+      - "27017:27017"  # optionnel, permet d'accéder depuis l'hôte
+    volumes:
+      - mongo-data:/data/db
+
+  migration_app:
+    build: .
+    container_name: migration_container
+    env_file:
+      - .env  # pour les variables AWS
+    environment:
+      MONGO_URI: "mongodb://forecast_writer:MotDePasseSécurisé123@mongodb:27017/weather_data_db?authSource=admin"
+    depends_on:
+      - mongodb
+    networks:
+      - weather-network
+
+volumes:
+  mongo-data:
+
+networks:
+  weather-network:
