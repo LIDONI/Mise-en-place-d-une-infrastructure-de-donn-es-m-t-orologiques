@@ -20,20 +20,20 @@ En tant que **Data Engineer**, j’ai conçu et déployé un **pipeline complet*
 
 Le pipeline de données **Forecast 2.0** se compose de plusieurs étapes :
 
-### 1️⃣ Extraction – *Airbyte + S3*
+### 1️ - Extraction – *Airbyte + S3*
 - Connexion aux sources météo *(Excel, JSON)*  
 - Chargement automatique dans un bucket **AWS S3**
 
-### 2️⃣ Transformation – *Python*
+### 2️- Transformation – *Python*
 - Nettoyage, typage et harmonisation des colonnes  
 - Contrôles qualité *(valeurs manquantes, cohérence, doublons)*
 
-### 3️⃣ Chargement – *MongoDB*
+### 3️- Chargement – *MongoDB*
 - Migration des données depuis **S3** vers **MongoDB**  
 - Création de collections adaptées aux différents types de stations  
 - Vérification automatique de la conformité post-migration
 
-### 4️⃣ Conteneurisation & Déploiement – *Docker + AWS ECS*
+### 4️- Conteneurisation & Déploiement – *Docker + AWS ECS*
 - Conteneurisation du script Python et de MongoDB  
 - Déploiement sur **Amazon ECS** avec monitoring via **CloudWatch**
 
